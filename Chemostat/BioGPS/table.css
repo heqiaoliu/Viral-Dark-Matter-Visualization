@@ -1,0 +1,26 @@
+
+table, td, tr
+{
+border:1px solid green;
+}
+/*th
+{
+background-color:green;
+color:white;
+}
+*/
+.tab1 {
+font-family: arial, verdana, sans-serif;
+font-size: 18pt;
+background-color:blue;
+width: 50%;
+text-align: left;
+}
+
+.tab2 {
+font-family: Courier, Monospace; 
+font-size: 14pt;
+background-color:red;
+width: 50%;
+text-align: center;
+}

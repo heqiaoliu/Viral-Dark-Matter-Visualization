@@ -1,0 +1,120 @@
+<html>
+<canvas id="myCanvas" width="200" height="100"style="border:1px solid #000000;">
+</canvas>
+<canvas id="instru" width="165" height="15">
+</canvas>
+<p id="infobox">null</p>
+<script>
+
+var temp10="#A50026";
+var temp9="#D73027";
+var temp8="#F46D43";
+var temp7="#FDAE61";
+var temp6="#FEE08B";
+var temp5="#FFFFBF";
+var temp4="#D9EF8B";
+var temp3="#A6D96A";
+var temp2="#66BD63";
+var temp1="#1A9850";
+var temp0="#006837";
+
+var ins=document.getElementById("instru");
+var instru=ins.getContext("2d");
+indexing();
+
+function indexing(){
+	for(var i=0;i<=10;i++){
+			var color=getColor(i);
+			instru.fillStyle=color;
+			instru.fillRect(15*i,0,15,15);
+	}
+}
+
+testWindow();
+var c=document.getElementById("myCanvas");
+function putImage()
+{
+  var canvas1 = document.getElementById("canvasSignature");        
+  if (canvas1.getContext) {
+     var ctx = canvas1.getContext("2d");                
+     var myImage = canvas1.toDataURL("image/png");      
+  }
+  var imageElement = document.getElementById("MyPix");  
+  window.location = myImage;                           
+
+} 
+
+function testWindow()
+{
+  console.log(document.URL);
+}
+callForData();	
+function callForData(){
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {// code for IE6, IE5
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		var text=xmlhttp.responseText;
+		var dataObj=JSON.parse(text);
+		console.log(dataObj);
+		var ctx=c.getContext("2d");
+		ctx.canvas.width=10*15;
+		ctx.canvas.height=dataObj.count*15;
+		var x=0;
+		var y=0;
+		for(var i=0;i<100;i++)
+		{
+			var color;
+			color=getColor(dataObj.sets[i]);
+			ctx.fillStyle=color;
+			ctx.fillRect(x,y,15,15);
+			x+=15;
+			if((i+1)%10==0){
+				y+=15;
+				x=0;
+			}
+		
+		}
+
+    }
+  }
+  xmlhttp.open("GET","testData.php?data=test",true);
+  xmlhttp.send();
+}
+
+function getColor(num){
+	switch(num){
+		case 0:
+			return temp0;
+		case 1:
+			return temp1;
+		case 2:
+			return temp2;
+		case 3:
+			return temp3;
+		case 4:
+			return temp4;
+		case 5:
+			return temp5;
+		case 6:
+			return temp6;
+		case 7:
+			return temp7;
+		case 8:
+			return temp8;
+		case 9:
+			return temp9;
+		case 10:
+			return temp10;
+	}
+}
+</script>
+</html>

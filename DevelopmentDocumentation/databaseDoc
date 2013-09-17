@@ -1,0 +1,54 @@
+
+
+*===============*
+|	vdm_joomla	|
+|				|
+*===============*
+
+
+vdm_users 
+	name 		VARCHAR(255)
+	username	varchar(150)
+	email		varchar(100)
+	password	varchar(100)
+
+
+*=======================*
+|	viral_dark_matter	|
+|						|
+*=======================*
+
+bacteria			
+	bacteria_id			int(11)
+	bact_external_id	varchar(60)
+	bact_name			varchar(60)
+	vc_id				int(11)
+	vector				varchar(60)
+	genotype			varchar(60)
+	ATCC_ID				int(11)
+	other_ids			varchar(255)
+
+vdm_files
+	file_id				int(11)
+	file_name			varchar(100)
+	name				varchar(255)
+	exp_date			date
+	upload_date			timestamp
+	bacteria_id			int(11)
+	notes				text
+
+vdm_exp
+	exp_id 				int(11)
+	bacteria_id			int(11)
+	plate_id			int(11)
+	replicate_num		int(11)
+	file_id				int(11)
+
+vdm_growth
+	growth_id			int(11)
+	well_num_id			int(11)
+	time				int(11)
+	growth_measurement	decimal(7,6)
+	exp_id				int(11)
+
+vdm_well_num

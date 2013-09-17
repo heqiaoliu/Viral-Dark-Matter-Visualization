@@ -1,0 +1,104 @@
+tr td{
+padding:5px;
+}
+
+.ui-tabs-anchor{
+font-size:12px;
+}
+
+
+.focus{
+border:1px black solid;
+}
+
+.select_option{
+	float:top;
+	background:#F5F5F5;
+	margin:3px;
+}
+
+.well_ele{
+	width:20px;
+	height:20px;
+    background-color: #F5F5F5;
+    border: 2px solid #F1F1F1;
+    border-radius: 4px 4px 4px 4px;
+    margin: 2px;
+	padding:5px;
+}
+
+
+.color0{
+background:skyblue;
+border: 2px solid skyblue;
+}
+
+.color1{
+background:yellowgreen;
+border: 2px solid yellowgreen;
+}
+
+.color2{
+background:grey;
+border: 2px solid grey;
+}
+
+.selected{
+background-color:yellow;
+}
+
+.panel{
+overflow:hidden;
+}
+
+#bact_id{
+width:2048px;
+height:100%;
+}
+
+.bact_step{
+float:left;
+min-width:20%;
+border-right:1px solid lightgray;
+margin-right:3%;
+height:100%;
+}
+
+
+.posters{
+	position:absolute;
+	top:5%;
+	bottom:10%;
+	left:2%;
+	right:25%;
+	min-height:500px;
+	min-width:550px;
+	background:white;
+}
+
+#mainfunctions .function{
+	height:80%;
+}
+
+#bact_list{
+	overflow-y:scroll;
+	height:80%;
+	margin-bottom:10px;
+	width:90%;
+}
+
+#chart_option{
+	position:fixed;
+	width:20%;
+	right:0px;
+	top:30px;
+	background:white;
+	margin:5px;
+	padding:5px;
+}
+
+#select_options{
+	float:left;
+}
+
+

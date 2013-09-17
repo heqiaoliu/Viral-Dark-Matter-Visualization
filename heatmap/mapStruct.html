@@ -1,0 +1,82 @@
+
+
+<html>
+<link rel="stylesheet" type="text/css" href="http://vdm.sdsu.edu/data/heatmap/mapStyle.css" />
+<body id="map">
+	<div>
+		<table>
+			<tr>
+				<td></td><td></td>
+				<td></td><td></td>
+				<td></td><td></td>
+			</tr>
+			<tr>
+				<td></td><td></td>
+				<td></td><td></td>
+				<td></td><td></td>
+			</tr>
+			<tr>
+				<td></td><td></td>
+				<td></td><td></td>
+				<td></td><td></td>
+			</tr>
+			<tr>
+				<td></td><td></td>
+				<td></td><td></td>
+				<td></td><td></td>
+			</tr>
+			<tr>
+				<td></td><td></td>
+				<td></td><td></td>
+				<td></td><td></td>
+			</tr>
+		</table>
+	</div>
+<canvas id="myCanvas" width="200" height="100"style="border:1px solid #000000;">
+</canvas> 
+<div><button onclick="putImage()">Draw to Image</button></div>
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="#FF0000";
+ctx.fillRect(0,0,10,10);
+ctx.fillRect(20,0,10,10);
+ctx.fillRect(40,0,10,10);
+ctx.fillRect(60,0,10,10);
+ctx.fillRect(80,0,10,10);
+ctx.fillRect(100,0,10,10);
+ctx.fillStyle="#FF8000";
+ctx.fillRect(10,0,10,10);
+ctx.fillRect(30,0,10,10);
+ctx.fillRect(50,0,10,10);
+ctx.fillStyle="#FFF000";
+ctx.fillRect(70,0,10,10);
+ctx.fillRect(90,0,10,10);
+ctx.fillRect(110,10,10,10);
+ctx.fillRect(10,10,10,10);
+ctx.fillRect(30,10,10,10);
+ctx.fillRect(50,10,10,10);
+ctx.fillRect(70,10,10,10);
+ctx.fillRect(90,10,10,10);
+ctx.fillRect(110,10,10,10);
+ctx.fillStyle="#FFF000";
+ctx.fillRect(0,20,10,10);
+ctx.fillRect(20,20,10,10);
+ctx.fillRect(40,20,10,10);
+ctx.fillRect(60,20,10,10);
+ctx.fillRect(80,20,10,10);
+ctx.fillRect(100,20,10,10);
+function putImage()
+{
+  var canvas1 = document.getElementById("canvasSignature");        
+  if (canvas1.getContext) {
+     var ctx = canvas1.getContext("2d");                
+     var myImage = canvas1.toDataURL("image/png");      
+  }
+  var imageElement = document.getElementById("MyPix");  
+  window.location = myImage;                           
+
+} 
+</script> 
+</body>
+</html>
