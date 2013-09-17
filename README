@@ -1,6 +1,7 @@
 The Viral Dark Matter user interface is a web site that interfaces with a database at San Diego State University that allows users to upload experimental information straight to the database.
 
 09/16/2013
+	Currently VDM site starting the 2.0 alpha edition
 	- Database level are modulized. 
 	- Javascript/JQuery codes are functional classified.
 
